@@ -1,0 +1,25 @@
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/citizix_db
+    username: citizix_user
+    password: S3cret
+  jpa:
+    hibernate:
+      ddl-auto: none
+  liquibase:
+    change-log: classpath:/db/changelog-master.xml
+    enabled: true
+
+application:
+  security:
+    jwt:
+      secret-key: thisIsOnlyTestIwillChangeItInProductiondnlkandkjsnakjdwadsadwadsadwa
+      expiration: 31536000000 # a year
+      refresh-token:
+        expiration: 63072000000 # two year
+
+logging:
+  level:
+    ROOT: info
+
