@@ -1,4 +1,4 @@
 FROM openjdk:17-jdk-slim
 WORKDIR /app
-COPY target/Task.jar /app/Task.jar
-CMD ["java", "-jar", "Task.jar"]
+COPY target/TaskAuthentication.jar /app/TaskAuthentication.jar
+CMD ["java", "-jar", "TaskAuthentication.jar"]
